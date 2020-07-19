@@ -1,0 +1,87 @@
+@import "../mixins/transitions.scss";
+@import "../mixins/media.scss";
+
+.menu {
+    position: fixed;
+    right: 0;
+    // right: -160px;
+    top: 0;
+    z-index: 9;
+    background: white;
+    width: 225px;
+    transform: translateX(160px);
+    // margin-left: -230px;
+    // transform: translate3d(230px, 0, 0);
+    height: 100vh;
+    display: flex;
+    border-left: 1px solid $base-color;
+    @include transition-transform;
+
+    &.open {
+        // right: 0;
+        transform: translateX(0);
+    }
+
+    .wrapper {
+        padding: 0;
+        width: 100%;
+    }
+
+    .menu_title {
+        position: absolute;
+        top: 50%;
+        left: 33%;
+        font-size: 1.222rem;
+        transform: rotate(90deg) translateY(100%) translateX(-50%);
+        text-align: center;
+        transition: 0.5s;
+        transform-origin: 0 0;
+        opacity: 1;
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
+
+
+        &.menu_title_closed {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    z-index: 9999;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -9999em;
+    -webkit-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    background: transparent;
+    @include transition-standard;
+
+    &.open {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.hamburgerClose {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 17px;
+    opacity: 0;
+    @include transition-standard;
+
+    &.open {
+        opacity: 1;
+    }
+}

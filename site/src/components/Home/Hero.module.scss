@@ -1,0 +1,90 @@
+@import "../../mixins/media.scss";
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon {
+    position: absolute;
+    top: 0;
+    left: 25vw;
+    z-index: -1;
+    // min-width: 63vw;
+    width: 85vw;
+    max-width: 100vmin;
+    // max-height: 107vh;
+    // max-width: 600px;
+}
+
+.headline {
+    margin-bottom: 85px;
+}
+
+@media (orientation: portrait) {
+
+    /* portrait styles */
+    .icon {
+        height: 105vh;
+        width: auto;
+        left: 15vw;
+        max-height: initial;
+        max-width: initial;
+    }
+}
+
+@include desktop {
+    .icon {
+        // left: 300px;
+    }
+
+    .icon {
+        // max-height: 107vh;
+        // max-width: 600px;
+        left: 25vw;
+    }
+}
+
+@include max_desktop {
+    .headline {
+        margin-bottom: 50px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+    .hero {
+        min-height: 66vh;
+    }
+
+    .icon {
+        height: 66vh !important;
+    }
+}
+
+@include tablet {
+    .hero {
+        // min-height: 120vmin;
+        border-bottom: 1px solid $base-color;
+    }
+
+    :global {
+        #home .banner {
+            background: white;
+            color: $base-color;
+        }
+    }
+}
+
+@include phone {
+    .icon {
+        // width: 100vw;
+        // left: 25vw;
+    }
+
+    :global {
+        #home .banner .flex {
+            align-items: flex-start;
+        }
+    }
+}

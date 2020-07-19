@@ -1,0 +1,8 @@
+@import "../../../mixins/media.scss";
+
+
+@include desktop {
+    .hero {
+        padding-bottom: 85px !important;
+    }
+}
