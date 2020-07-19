@@ -4,6 +4,8 @@ import ContextConsumer from "./Context"
 
 import style from "./Header.module.scss"
 import Logo from "../../static/icon.svg"
+import LogoInverse from "../../static/icon-inverse.svg"
+import LogoBlack from "../../static/icon-black.svg"
 
 const Header = () => (
   <ContextConsumer>
@@ -11,7 +13,13 @@ const Header = () => (
       <header>
         <div className={style.wrapper}>
           <Link to="/" style={{ display: "block" }}>
-            <Logo className={style.logo} />
+            {data.logo === "logo-black" ? (
+              <LogoBlack className={`${style.logo} white`} />
+            ) : data.logo === "logo-inverse" ? (
+              <LogoInverse className={`${style.logo} inverse`} />
+            ) : (
+              <Logo className={`${style.logo} base`} />
+            )}
           </Link>
         </div>
       </header>

@@ -12,12 +12,12 @@ const getTransitionStyles = {
   entered: {
     transition: `700ms ease-in-out`,
     opacity: 1,
-    // transform: `translateY(0)`,
+    // transform: `translateX(-100%)`,
   },
   exiting: {
     transition: `700ms ease-in-out`,
     opacity: 0.0001,
-
+    // transform: `translateX(100%)`,
     // transform: `translateY(100%)`,
   },
 }
@@ -36,6 +36,13 @@ const Transition = props => {
         {status => (
           <div
             style={{
+              // background: "#f5c614",
+              // height: "100%",
+              // width: "100%",
+              // position: "fixed",
+              // left: 0,
+              // top: 0,
+              // zIndex: 99999,
               ...getTransitionStyles[status],
             }}
           >
