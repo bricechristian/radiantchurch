@@ -1,24 +1,35 @@
-import React, { useEffect } from "react"
-// import { graphql } from "gatsby"
-import { Link } from "gatsby"
+import React, { useState, useEffect } from "react"
+import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 
 import SEO from "../components/SEO"
 
 import Hero from "../components/Home/Hero"
+import Feature1 from "../components/Home/Feature1"
+import Feature2 from "../components/Home/Feature2"
 
 const IndexPage = props => {
-  //sets menu to be closed on page mount
   const { set } = props
+  const [scrollPos, setScrollPos] = useState(0)
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    // console.log(currPos.y)
+    setScrollPos(currPos.y)
+  })
+
   useEffect(() => {
-    set({ menuOpen: false, logo: "logo" })
+    //sets menu to be closed on page mount
+    setTimeout(() => {
+      set({ menuOpen: false, logo: "logo" })
+    }, 400)
   }, [])
 
   return (
     <>
       <SEO title="Radiant Church | Charleston, SC" />
       <div className="page" id="home">
-        <Hero />
-        <Link to="/about-us">About Us</Link>
+        <Hero scrollPos={scrollPos} />
+        <Feature1 />
+        <Feature2 />
       </div>
     </>
   )

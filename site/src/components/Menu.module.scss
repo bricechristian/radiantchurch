@@ -6,66 +6,70 @@
     right: 0;
     // right: -160px;
     top: 0;
-    z-index: 9;
-    background: white;
-    width: 225px;
-    transform: translateX(160px);
+    z-index: 99;
+    background: $yellow-color;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
     // margin-left: -230px;
     // transform: translate3d(230px, 0, 0);
     height: 100vh;
     display: flex;
     border-left: 1px solid $base-color;
-    @include transition-transform;
+    @include transition-slow;
 
     &.open {
         // right: 0;
-        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
     }
 
     .wrapper {
-        padding: 0;
+        padding: 125px 90px;
         width: 100%;
     }
 
-    .menu_title {
-        position: absolute;
-        top: 50%;
-        left: 33%;
-        font-size: 1.222rem;
-        transform: rotate(90deg) translateY(100%) translateX(-50%);
-        text-align: center;
-        transition: 0.5s;
-        transform-origin: 0 0;
-        opacity: 1;
-        width: 100%;
-        visibility: visible;
-        opacity: 1;
+    .menu_item {
+        list-style: none;
 
+        &>a {
+            display: flex;
+            align-items: center;
+        }
 
-        &.menu_title_closed {
-            opacity: 0;
-            visibility: hidden;
+        &>a:before {
+            content: attr(data-num);
+            font-family: "Gilroy Extrabold";
+            font-size: 1.8125rem;
+            line-height: 1;
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        ul {
+            padding-left: 50px;
+            margin-top: 10px;
+        }
+
+        .child_menu_item {
+            list-style: none;
+            flex: 0 33.333%;
         }
     }
+
 }
 
 .hamburger {
-    display: inline-block;
+    position: fixed;
+    z-index: 99999;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 20px;
-    left: 17px;
-    z-index: 9999;
+    top: 40px;
+    right: 20px;
     overflow: hidden;
-    text-align: left;
-    text-indent: -9999em;
-    -webkit-transition: color 0.2s ease-in-out;
-    -o-transition: color 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out;
+    opacity: 1;
+    visibility: visible;
     background: transparent;
-    @include transition-standard;
 
     &.open {
         opacity: 0;
@@ -74,14 +78,16 @@
 }
 
 .hamburgerClose {
-    position: absolute;
+    position: fixed;
+    z-index: 99999;
     cursor: pointer;
-    top: 20px;
-    right: 17px;
+    top: 40px;
+    right: 20px;
     opacity: 0;
     @include transition-standard;
 
     &.open {
         opacity: 1;
+        visibility: visible;
     }
 }

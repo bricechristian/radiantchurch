@@ -1,90 +1,44 @@
 @import "../../mixins/media.scss";
 
-.hero {
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
+section.hero {
+    height: calc(100vh - 200px);
+    min-height: 500px;
+    padding-bottom: 50px;
 
-.icon {
-    position: absolute;
-    top: 0;
-    left: 25vw;
-    z-index: -1;
-    // min-width: 63vw;
-    width: 85vw;
-    max-width: 100vmin;
-    // max-height: 107vh;
-    // max-width: 600px;
-}
-
-.headline {
-    margin-bottom: 85px;
-}
-
-@media (orientation: portrait) {
-
-    /* portrait styles */
-    .icon {
-        height: 105vh;
-        width: auto;
-        left: 15vw;
-        max-height: initial;
-        max-width: initial;
-    }
-}
-
-@include desktop {
-    .icon {
-        // left: 300px;
+    .wrapper {
+        height: 100%;
+        padding-bottom: 175px;
+        // height: calc(100vh - 400px);
+        padding-right: 0;
     }
 
-    .icon {
-        // max-height: 107vh;
-        // max-width: 600px;
-        left: 25vw;
-    }
-}
+    .title_container {
+        position: absolute;
+        z-index: 1;
+        top: 100px;
+        right: 25vw;
+        will-change: transform;
 
-@include max_desktop {
+        .title {
+            transform: rotate(90deg) translateY(50%) translateX(75%);
+            transform-origin: 100% 0;
+            font-size: calc(1rem + 20vw);
+        }
+    }
+
     .headline {
-        margin-bottom: 50px;
-    }
-}
-
-@media (orientation: portrait) and (max-width: 600px) {
-    .hero {
-        min-height: 66vh;
+        width: 50%;
     }
 
-    .icon {
-        height: 66vh !important;
-    }
-}
-
-@include tablet {
-    .hero {
-        // min-height: 120vmin;
-        border-bottom: 1px solid $base-color;
+    .about {
+        max-width: 385px;
     }
 
-    :global {
-        #home .banner {
-            background: white;
-            color: $base-color;
-        }
-    }
-}
-
-@include phone {
-    .icon {
-        // width: 100vw;
-        // left: 25vw;
+    .image {
+        // padding: 10%;
+        min-height: 30vw;
+        background-color: $yellow-color;
+        background-blend-mode: multiply;
     }
 
-    :global {
-        #home .banner .flex {
-            align-items: flex-start;
-        }
-    }
 }

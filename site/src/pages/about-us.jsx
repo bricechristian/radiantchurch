@@ -8,7 +8,9 @@ const AboutUsPage = props => {
   //sets menu to be closed on page mount
   const { set } = props
   useEffect(() => {
-    set({ menuOpen: false, logo: "logo-black" })
+    setTimeout(() => {
+      set({ menuOpen: false, logo: "logo-black" })
+    }, 400)
   }, [])
 
   return (

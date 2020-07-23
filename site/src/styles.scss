@@ -51,6 +51,10 @@ a {
   background-color: $yellow-color;
 }
 
+.gray-bg {
+  background-color: $gray-color;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -229,17 +233,22 @@ a {
   width: 20%;
 }
 
+section.pad_lg {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
 section.pad {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-section.pad-md {
+section.pad_md {
   padding-top: 85px;
   padding-bottom: 85px;
 }
 
-section.pad-sm {
+section.pad_sm {
   padding-top: 65px;
   padding-bottom: 65px;
 }
@@ -286,16 +295,10 @@ section.pad-sm {
 
 .overlay {
   position: fixed;
-  z-index: 999;
+  z-index: 99999999;
   height: 100%;
   width: 100%;
   background: $white-color;
-
-  .wrapper {
-    max-width: calc(100% - 65px);
-    margin-right: auto;
-    margin-left: 0;
-  }
 
   &.ready {
     animation: reveal 0.5s normal forwards ease-in-out;
@@ -324,11 +327,10 @@ section.pad-sm {
 
 .btn {
   display: inline-block;
-  color: $base-color;
+  color: $white-color;
   @include caps-font;
-  padding: 15px 45px;
-  border: 1px solid $base-color !important;
-  border-radius: 30px;
+  padding: 15px 45px 15px 25px;
+  border: 1px solid $yellow-color;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -336,6 +338,42 @@ section.pad-sm {
   position: relative;
   z-index: 1;
   @include transition-standard;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 15px;
+    height: 10px;
+    background: url('/btn-arrow.svg') center/15px no-repeat;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    background: $white-color;
+    color: $yellow-color;
+
+    &:after {
+      background: url('/btn-arrow-yellow.svg') center/15px no-repeat;
+    }
+  }
+
+  &.transparent {
+    background: transparent;
+    color: $white-color;
+
+    &:hover {
+      background: $yellow-color;
+
+      &:after {
+        background: url('/btn-arrow.svg') center/15px no-repeat;
+      }
+    }
+
+    // border-color: $white-color;
+  }
 }
 
 .link-arrow {
@@ -417,9 +455,6 @@ section.pad-sm {
 
 .container {
   min-height: 100vh;
-  padding-right: 65px;
-  // transform: translateX(0);
-  @include transition-transform;
 
   &.menu-open {
     // transform: translateX(-165px);
@@ -455,7 +490,7 @@ section.pad-sm {
 
 @include max_desktop {
   .wrapper {
-    padding: 0 30px;
+    // padding: 0 30px;
   }
 
   section.pad {

@@ -42,9 +42,9 @@
 
 @mixin caps-font {
   @include gilroy-light;
-  font-size: 0.944rem;
-  line-height: 1rem;
-  letter-spacing: 0.075em;
+  font-size: 0.75rem;
+  line-height: 0.9rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
@@ -64,8 +64,8 @@
 html,
 body {
   @include avenir-book;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 1.6;
   letter-spacing: 0.035em;
 }
 
@@ -100,39 +100,62 @@ h3 {
 }
 
 .text-xs {
-  font-size: 0.644rem;
+  // 12px
+  font-size: 0.75rem;
   line-height: 0.9rem;
 }
 
 .text-sm {
-  font-size: 0.944rem;
-  line-height: 1.5rem;
-}
-
-.text-sm-2 {
-  font-size: 1.466rem;
-  line-height: 2.1rem;
+  // 14px
+  font-size: 0.875rem;
+  line-height: 1rem;
 }
 
 .text-md {
-  font-size: 1.666rem;
-  line-height: 2.1rem;
+  // 18px
+  font-size: 1.125rem;
 }
 
 .text-lg {
-  font-size: 2rem;
-  line-height: 2.222rem;
+  // 24px
+  font-size: 1.5rem;
 }
 
 .text-xl {
-  font-size: 3.411rem;
-  line-height: 4rem;
+  // 30px
+  font-size: 1.675rem;
 }
 
 .text-2xl {
-  font-size: calc(0.5rem + 5.5vw);
-  line-height: calc(0.5rem + 6.5vw);
+  // 36px
+  font-size: 2.25rem;
+  line-height: 1.2;
 }
+
+.text-3xl {
+  // 42px
+  font-size: 2.625rem;
+  line-height: 1.2;
+}
+
+.text-4xl {
+  // 56px
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+.text-5xl {
+  // 70px
+  font-size: 4.375rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  // 88px
+  font-size: 5.5rem;
+  line-height: 1;
+}
+
 
 @include desktop {
   .text-2xl {
@@ -148,28 +171,28 @@ h3 {
 
 @include max_desktop {
 
-  html,
-  body {
-    font-size: 16px;
-    line-height: 26px;
-  }
+  // html,
+  // body {
+  //   font-size: 16px;
+  //   line-height: 26px;
+  // }
 
-  .text-md {
-    font-size: 1.466rem;
-    line-height: 2rem;
-  }
+  // .text-md {
+  //   font-size: 1.466rem;
+  //   line-height: 2rem;
+  // }
 
-  .text-lg {
-    font-size: 1.8rem;
-    line-height: 2rem;
-  }
+  // .text-lg {
+  //   font-size: 1.8rem;
+  //   line-height: 2rem;
+  // }
 }
 
 @media screen and (max-width: 1260px) {
-  .text-xl {
-    font-size: calc(0.5rem + 3.5vw);
-    line-height: calc(0.5rem + 4.5vw);
-  }
+  // .text-xl {
+  //   font-size: calc(0.5rem + 3.5vw);
+  //   line-height: calc(0.5rem + 4.5vw);
+  // }
 }
 
 @include tablet {
@@ -185,34 +208,34 @@ h3 {
 }
 
 @include phone {
-  .caps {
-    font-size: 0.8rem;
-  }
+  // .caps {
+  //   font-size: 0.8rem;
+  // }
 
-  .text-sm-2 {
-    font-size: 1.2rem;
-    line-height: 1.9rem;
-  }
+  // .text-sm-2 {
+  //   font-size: 1.2rem;
+  //   line-height: 1.9rem;
+  // }
 
-  .text-md {
-    font-size: 1.3rem;
-    line-height: 1.7rem;
-  }
+  // .text-md {
+  //   font-size: 1.3rem;
+  //   line-height: 1.7rem;
+  // }
 
-  .text-lg {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
+  // .text-lg {
+  //   font-size: 1.25rem;
+  //   line-height: 1.75rem;
+  // }
 }
 
 @include sm-phone {
-  .text-xl {
-    font-size: calc(0.5rem + 5.5vw);
-    line-height: calc(0.5rem + 7vw);
-  }
+  // .text-xl {
+  //   font-size: calc(0.5rem + 5.5vw);
+  //   line-height: calc(0.5rem + 7vw);
+  // }
 
-  .text-2xl {
-    font-size: calc(0.5rem + 5.85vw);
-    line-height: calc(0.5rem + 8.5vw);
-  }
+  // .text-2xl {
+  //   font-size: calc(0.5rem + 5.85vw);
+  //   line-height: calc(0.5rem + 8.5vw);
+  // }
 }

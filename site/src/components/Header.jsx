@@ -10,11 +10,11 @@ import LogoBlack from "../../static/icon-black.svg"
 const Header = () => (
   <ContextConsumer>
     {({ data, set }) => (
-      <header>
+      <header className={style.header}>
         <div className={style.wrapper}>
           <Link to="/" style={{ display: "block" }}>
             {data.logo === "logo-black" ? (
-              <LogoBlack className={`${style.logo} white`} />
+              <LogoBlack className={`${style.logo} black`} />
             ) : data.logo === "logo-inverse" ? (
               <LogoInverse className={`${style.logo} inverse`} />
             ) : (

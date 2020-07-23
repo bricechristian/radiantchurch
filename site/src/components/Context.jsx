@@ -5,7 +5,9 @@ const defaultContextValue = {
   data: {
     // set your initial data shape here
     menuOpen: false,
+    hamburgerColor: "black",
     logo: "logo",
+    winHeight: 1000,
   },
   set: () => {},
 }
@@ -35,6 +37,18 @@ class ContextProviderComponent extends React.Component {
   componentDidMount() {
     var data = { ...this.state.data }
     data.menuOpen = false
+    this.setState({ data })
+    this.updateWindowDimensions()
+    window.addEventListener("resize", this.updateWindowDimensions)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions)
+  }
+
+  updateWindowDimensions = () => {
+    var data = { ...this.state.data }
+    data.winHeight = window.innerHeight
     this.setState({ data })
   }
 

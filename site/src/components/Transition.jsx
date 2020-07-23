@@ -6,6 +6,7 @@ import {
 const getTransitionStyles = {
   entering: {
     position: `absolute`,
+    transform: `translateY(40px)`,
     // transform: `translateY(-100%)`,
     opacity: 0.0001,
   },
@@ -17,7 +18,7 @@ const getTransitionStyles = {
   exiting: {
     transition: `700ms ease-in-out`,
     opacity: 0.0001,
-    // transform: `translateX(100%)`,
+    transform: `translateY(40px)`,
     // transform: `translateY(100%)`,
   },
 }

@@ -6,6 +6,7 @@
   "author": "Brice Christian <bricechristian93@gmail.com>",
   "dependencies": {
     "@bumped-inc/gatsby-plugin-optional-chaining": "^1.0.0",
+    "@n8tb1t/use-scroll-position": "^1.0.43",
     "dotenv": "^8.2.0",
     "framer-motion": "^2.1.0",
     "gatsby": "^2.23.12",
@@ -29,7 +30,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.26.2",
-    "react-transition-group": "^4.4.1"
+    "react-transition-group": "^4.4.1",
+    "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
     "prettier": "2.0.5"
