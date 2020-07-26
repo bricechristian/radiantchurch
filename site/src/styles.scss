@@ -163,6 +163,9 @@ a {
     &.grid {
       display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-gap: 35px;
     }
 
     &.grid.two {
@@ -233,24 +236,28 @@ a {
   width: 20%;
 }
 
-section.pad_lg {
+.pad_lg {
   padding-top: 150px;
   padding-bottom: 150px;
 }
 
-section.pad {
+.pad {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-section.pad_md {
+.pad_md {
   padding-top: 85px;
   padding-bottom: 85px;
 }
 
-section.pad_sm {
+.pad_sm {
   padding-top: 65px;
   padding-bottom: 65px;
+}
+
+.no_pad_top {
+  padding-top: 0;
 }
 
 .wrapper {
@@ -293,6 +300,13 @@ section.pad_sm {
   }
 }
 
+em,
+strong {
+  position: relative;
+  font-weight: inherit;
+  font-style: inherit;
+}
+
 .overlay {
   position: fixed;
   z-index: 99999999;
@@ -325,7 +339,8 @@ section.pad_sm {
   background-repeat: no-repeat !important;
 }
 
-.btn {
+.btn,
+.submit {
   display: inline-block;
   color: $white-color;
   @include caps-font;
@@ -373,53 +388,6 @@ section.pad_sm {
     }
 
     // border-color: $white-color;
-  }
-}
-
-.link-arrow {
-  display: inline-block;
-  transform: translateX(0);
-  overflow: hidden;
-  padding: 0 55px 0 0;
-  filter: blur(0);
-  position: relative;
-  top: 3px;
-
-  &:hover {
-    // padding: 0 15px;
-    // margin-left: 45px;
-    filter: blur(2px);
-    transform: translateX(7px);
-  }
-
-  &:after {
-    content: "";
-    margin-left: 5px;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-    background: url(/link-arrow.svg);
-    background-size: 35px;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform-origin: 50% 0;
-    transform: translateX(0) translateY(-50%);
-    @include transition-standard;
-    position: absolute;
-    right: -5px;
-    top: 50%;
-  }
-
-  &:hover:after {
-    // opacity: 0;
-    // transform: translateY(-50%);
-  }
-
-  &.black:after {
-    background: url(/link-arrow-black.svg);
-    background-size: 35px;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 }
 

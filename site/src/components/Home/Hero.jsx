@@ -16,7 +16,7 @@ const Hero = props => {
           </h1>
         </div>
         <h2 className={`${style.headline} text-6xl yellow-color`}>
-          God’s family on mission.
+          God’s <em>family</em> on mission.
         </h2>
         <div className="flex align-end" style={{ height: "100%" }}>
           <div className="col">

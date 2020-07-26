@@ -1,0 +1,10 @@
+@mixin underline1_black($height) {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $height;
+    background: url('/underline1_black.svg') center/cover no-repeat;
+}

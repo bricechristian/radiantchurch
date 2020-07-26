@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import ContextConsumer from "./Context"
 import Transition from "./Transition"
 import Header from "./Header"
-import Footer from "./Footer"
 import Menu from "./Menu"
 
 const PageWrap = props => {
@@ -39,10 +38,7 @@ const PageWrap = props => {
             >
               <main>
                 <Header />
-                <Transition location={location}>
-                  {childrenWithProps}
-                  <Footer />
-                </Transition>
+                <Transition location={location}>{childrenWithProps}</Transition>
               </main>
               <Menu location={location} />
             </div>

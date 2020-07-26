@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 
 import SEO from "../components/SEO"
+import Footer from "../components/Footer"
 
 import Hero from "../components/Home/Hero"
 import Feature1 from "../components/Home/Feature1"
 import Feature2 from "../components/Home/Feature2"
+import Feature3 from "../components/Home/Feature3"
 
 const IndexPage = props => {
   const { set } = props
@@ -30,6 +32,8 @@ const IndexPage = props => {
         <Hero scrollPos={scrollPos} />
         <Feature1 />
         <Feature2 />
+        <Feature3 />
+        <Footer />
       </div>
     </>
   )

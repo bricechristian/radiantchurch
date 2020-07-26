@@ -1,9 +1,14 @@
 @import "../../mixins/media.scss";
+@import "../../mixins/underlines-circles.scss";
 
 section.hero {
     height: calc(100vh - 200px);
     min-height: 500px;
     padding-bottom: 50px;
+
+    em::after {
+        @include underline1_black(20px);
+    }
 
     .wrapper {
         height: 100%;

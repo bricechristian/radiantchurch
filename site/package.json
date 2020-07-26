@@ -6,6 +6,9 @@
   "author": "Brice Christian <bricechristian93@gmail.com>",
   "dependencies": {
     "@bumped-inc/gatsby-plugin-optional-chaining": "^1.0.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "dotenv": "^8.2.0",
     "framer-motion": "^2.1.0",
