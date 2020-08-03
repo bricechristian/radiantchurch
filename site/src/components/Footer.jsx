@@ -33,7 +33,10 @@ const Footer = props => {
                 <div className={`${style.left} grid-item one-third flex`}>
                   <div className="inner">
                     <Logo />
-                    <p className="gilroy-light-font">
+                    <p
+                      className="gilroy-light-font text-sm"
+                      style={{ lineHeight: "1.5" }}
+                    >
                       In the same way, let your light shine before others, so
                       that they may see your good works and give glory to your
                       Father in heaven. - Matthew 5:16
@@ -73,32 +76,32 @@ const Footer = props => {
                       subscribe to our newsletter
                     </p>
                     <ul className={`${style.links} flex wrap`}>
-                      <li className={`${style.item} gilroy-light-font`}>
+                      <li className={`${style.item} gilroy-light-font text-sm`}>
                         <Link to="/" className="lowercase">
                           Link Title 1
                         </Link>
                       </li>
-                      <li className={`${style.item} gilroy-light-font`}>
+                      <li className={`${style.item} gilroy-light-font text-sm`}>
                         <Link to="/" className="lowercase">
                           Link Title 2
                         </Link>
                       </li>
-                      <li className={`${style.item} gilroy-light-font`}>
+                      <li className={`${style.item} gilroy-light-font text-sm`}>
                         <Link to="/" className="lowercase">
                           Link Title 3
                         </Link>
                       </li>
-                      <li className={`${style.item} gilroy-light-font`}>
+                      <li className={`${style.item} gilroy-light-font text-sm`}>
                         <Link to="/" className="lowercase">
                           Link Title 4
                         </Link>
                       </li>
-                      <li className={`${style.item} gilroy-light-font`}>
+                      <li className={`${style.item} gilroy-light-font text-sm`}>
                         <Link to="/" className="lowercase">
                           Link Title 5
                         </Link>
                       </li>
-                      <li className={`${style.item} gilroy-light-font`}>
+                      <li className={`${style.item} gilroy-light-font text-sm`}>
                         <Link to="/" className="lowercase">
                           Link Title 6
                         </Link>

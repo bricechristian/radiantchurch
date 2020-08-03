@@ -1,7 +1,13 @@
+@import "../../mixins/underlines-circles.scss";
+
 .inner {
     max-width: 415px;
     margin: 0 auto;
     padding: 35px;
+}
+
+.underline {
+    @include underline(-5px);
 }
 
 

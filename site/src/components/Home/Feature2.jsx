@@ -1,5 +1,7 @@
 import React from "react"
 
+import Underline from "../../../static/underline3_yellow.svg"
+
 import style from "./Feature.module.scss"
 
 const Feature1 = () => {
@@ -9,7 +11,13 @@ const Feature1 = () => {
         <div className="flex">
           <div className="one-half text flex column justify-center">
             <div className={`${style.inner} inner`}>
-              <h2 className="text-3xl">Lorem Ipsum Headline 2 lines</h2>
+              <h2 className="text-3xl">
+                Lorem Ipsum{" "}
+                <em>
+                  Headline <Underline className={style.underline} />
+                </em>{" "}
+                2 lines
+              </h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                 diam nonummy nibh euismod tincidunt ut laoreet dolore magna

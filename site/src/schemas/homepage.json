@@ -1,0 +1,39 @@
+{
+  "Main": {
+    "home_hero_headline": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Headline"
+      }
+    },
+    "home_hero_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    },
+    "home_hero_body_text": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Body Text"
+      }
+    },
+    "home_hero_button_text": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Button Text"
+      }
+    },
+    "home_hero_button_url": {
+      "type": "Link",
+      "config": {
+        "label": "Button URL"
+      }
+    }
+  }
+}

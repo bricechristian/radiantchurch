@@ -10,7 +10,34 @@ module.exports = {
     siteUrl: "http://localhost:8000/",
     image: "/og-image.jpg",
   },
-  plugins: [
+  plugins: [{
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
+        accessToken: process.env.GATSBY_PRISMIC_ACCESS_TOKEN,
+        linkResolver: ({
+          node,
+          key,
+          value
+        }) => (doc) => {
+          if (doc.isBroken) {
+            return "/not-found"
+          }
+          if (doc.type === "homepage") {
+            return "/"
+          }
+          if (doc.type === "page") {
+            return "/${doc.uid}"
+          }
+          return "/not-found"
+        },
+
+        prismicToolbar: true,
+        schemas: {
+          homepage: require('./src/schemas/homepage.json'),
+        }
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

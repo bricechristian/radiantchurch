@@ -6,8 +6,12 @@ section.hero {
     min-height: 500px;
     padding-bottom: 50px;
 
-    em::after {
-        @include underline1_black(20px);
+    // em::after {
+    //     @include underline1_black(1vw);
+    // }
+
+    .underline {
+        @include underline(0);
     }
 
     .wrapper {

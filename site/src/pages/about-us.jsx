@@ -4,6 +4,7 @@ import SEO from "../components/SEO"
 import Footer from "../components/Footer"
 
 import Hero from "../components/GlobalBlocks/Hero/Hero"
+import Intro from "../components/About/Intro"
 
 const AboutUsPage = props => {
   //sets menu to be closed on page mount
@@ -19,13 +20,13 @@ const AboutUsPage = props => {
       <SEO title="About Us" />
       <div className="page" id="about-us">
         <Hero
-          headline={
-            "Who we are, where we come from, and where we're headed as a church family"
-          }
+          pageTitle={`About Us`}
+          headline={`Who <em>we are,</em><br>where we come from,<br>and where we're headed<br>as a church family`}
           padding={150}
           bg={"yellow-bg"}
           color={"white-color"}
         />
+        <Intro />
         <Footer />
       </div>
     </>
